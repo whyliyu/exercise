@@ -17,17 +17,9 @@
         <module>kafkaClient</module>
         <module>log4j</module>
         <module>zkTest</module>
+        <module>jmx</module>
+        <module>mapred</module>
+        <module>yarn</module>
     </modules>
 
-    <dependencies>
-
-
-        <!-- https://mvnrepository.com/artifact/org.apache.phoenix/phoenix-core -->
-        <dependency>
-            <groupId>org.apache.phoenix</groupId>
-            <artifactId>phoenix-core</artifactId>
-            <version>4.11.0-HBase-1.2</version>
-        </dependency>
-
-    </dependencies>
 </project>

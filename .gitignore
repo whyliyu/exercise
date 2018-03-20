@@ -4,3 +4,4 @@ log/*
 *.iml
 output/*
 */target/*
+*.class

@@ -17,17 +17,34 @@ public class ZKTest {
     public static void main(String[] args) throws InterruptedException, IOException, KeeperException {
         ZKTest zkTest = new ZKTest();
         zkTest.init();
-        zkTest.setCreateWatch(rootPath ,zkCli1);
+//        zkTest.setCreateWatch(rootPath ,zkCli1);
 
-        zkCli1.create(rootPath,"test".getBytes(),new ArrayList<ACL>(){
-            {
-                add(new ACL());
-            }
-        }, CreateMode.EPHEMERAL);
-        zkTest.close();
+//        zkCli1.create(rootPath,"test".getBytes(),new ArrayList<ACL>(){
+//            {
+//                add(new ACL());
+//            }
+//        }, CreateMode.EPHEMERAL);
+
+
+        System.out.println("zkString1");
+        //zkTest.close();
+        System.out.println("zkString2");
+
+        while(true) {
+//            try  {
+//                if( null != zkCli1.exists("/test",true)) {
+//                    System.out.println(new String(zkCli1.getData("/test",true,new Stat())));
+//                }
+//            }catch (Exception e) {
+//                e.printStackTrace();
+//            }
+
+            Thread.sleep(1000);
+        }
+
     }
 
-    static String connectString = "10.240.132.13:2181,10.240.132.13:5";
+    static String connectString = "10.242.28.117:2181,10.242.28.117:2180,10.242.28.117:2182";
 
     static String rootPath = "/mongo-connector";
     static ZooKeeper zkCli1;
@@ -35,17 +52,17 @@ public class ZKTest {
     static ZooKeeper zkCli3;
 
     public void init() throws IOException {
-        zkCli1 = new ZooKeeper("", 30 * 1000, new Watcher() {
+        zkCli1 = new ZooKeeper(connectString, 30 * 1000, new Watcher() {
             public void process(WatchedEvent event) {
                 System.out.println("session 1 watcher triggered ,zk state:" + event.getState() + ",event type:" + event.getType() + ",path:" + event.getPath());
             }
         });
-        zkCli2 = new ZooKeeper("", 30 * 1000, new Watcher() {
+        zkCli2 = new ZooKeeper(connectString, 30 * 1000, new Watcher() {
             public void process(WatchedEvent event) {
                 System.out.println("session 2 watcher triggered ,zk state:" + event.getState() + ",event type:" + event.getType() + ",path:" + event.getPath());
             }
         });
-        zkCli3 = new ZooKeeper("", 30 * 1000, new Watcher() {
+        zkCli3 = new ZooKeeper(connectString, 30 * 1000, new Watcher() {
             public void process(WatchedEvent event) {
                 System.out.println("session 3 watcher triggered ,zk state:" + event.getState() + ",event type:" + event.getType() + ",path:" + event.getPath());
             }

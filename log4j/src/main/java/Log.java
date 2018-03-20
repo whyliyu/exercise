@@ -7,9 +7,6 @@
 
 import org.apache.log4j.Logger;
 
-/**
- * @author 李宇航(liyuhang1@corp.netease.com)
- */
 public class Log {
     static Logger logger = Logger.getLogger(Log.class );
     public static void main(String[] args) {

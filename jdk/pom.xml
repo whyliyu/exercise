@@ -22,6 +22,18 @@
             </plugin>
         </plugins>
     </build>
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>com.sun.jdmk</groupId>-->
+            <!--<artifactId>jmxtools</artifactId>-->
+            <!--<version>RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.sun.jdmk</groupId>-->
+            <!--<artifactId>jmxtools</artifactId>-->
+            <!--<version>RELEASE</version>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
 
 
 </project>

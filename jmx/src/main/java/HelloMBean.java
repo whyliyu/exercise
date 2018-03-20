@@ -1,7 +1,10 @@
-package PACKAGE_NAME;
 
-/**
- * Created by liyuhang1 on 2017/12/28.
- */
-public class HelloMBean {
+public interface HelloMBean {
+    String getGreetings();
+
+    void setGreetings(String greetings);
+
+    void setObject(Object object);
+
+    void sayHello();
 }

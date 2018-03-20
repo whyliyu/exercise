@@ -11,5 +11,14 @@
 
     <artifactId>jmx</artifactId>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.sun.jdmk/jmxtools -->
+        <dependency>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxtools</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
